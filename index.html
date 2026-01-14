@@ -19,6 +19,40 @@
       min-height: 100vh;
     }
 
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    .animate-fade-in {
+      animation: fadeIn 0.8s ease-out forwards;
+    }
+
+    .animate-fade-in-up {
+      animation: fadeInUp 0.8s ease-out forwards;
+    }
+
+    .delay-1 { animation-delay: 0.1s; opacity: 0; }
+    .delay-2 { animation-delay: 0.3s; opacity: 0; }
+    .delay-3 { animation-delay: 0.5s; opacity: 0; }
+    .delay-4 { animation-delay: 0.7s; opacity: 0; }
+    .delay-5 { animation-delay: 0.9s; opacity: 0; }
+
     .container {
       display: flex;
       flex-direction: column;
@@ -241,8 +275,8 @@
     <!-- Left Side - White with Logo -->
     <div class="left-side">
       <div>
-        <img src="Logo_Melanie_Rome_4c_WEB_RGB.svg" alt="Melanie Romé Logo" class="logo">
-        <div class="quote-section">
+        <img src="Logo_Melanie_Rome_4c_WEB_RGB.svg" alt="Melanie Romé Logo" class="logo animate-fade-in delay-1">
+        <div class="quote-section animate-fade-in-up delay-2">
           <p class="quote-text">Ich wage das große Abenteuer, ich selbst zu sein</p>
           <p class="quote-author">Simone de Beauvoir</p>
         </div>
@@ -266,9 +300,9 @@
     <!-- Right Side - Beige with Content -->
     <div class="right-side">
       <div class="content">
-        <h2>Du willst</h2>
+        <h2 class="animate-fade-in-up delay-2">Du willst</h2>
 
-        <ul class="bullet-list">
+        <ul class="bullet-list animate-fade-in-up delay-3">
           <li>dich annehmen so wie du bist</li>
           <li>gute Lebensentscheidungen treffen</li>
           <li>voll Zuversicht in die Zukunft blicken</li>
@@ -276,7 +310,7 @@
           <li>dem Sinn des Lebens auf die Spur kommen</li>
         </ul>
 
-        <div class="contact-info">
+        <div class="contact-info animate-fade-in-up delay-4">
           <p class="name">Melanie Romé</p>
           <p>Dipl. Mentaltrainerin</p>
           <p class="title">Lebenspraktische Begleiterin für junge Frauen in Selbstfindung</p>
