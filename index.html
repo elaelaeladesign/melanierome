@@ -37,22 +37,52 @@
       min-height: 40vh;
     }
 
-    .logo {
-      max-width: 280px;
-      width: 100%;
-      height: auto;
-    }
+      .logo {
+        max-width: 400px;
+        width: 100%;
+        height: auto;
+      }
 
-    /* Curved Divider */
-    .curved-divider {
-      display: none;
-    }
+      .quote-section {
+        text-align: center;
+        margin-top: 2rem;
+        color: #aea18a;
+      }
+
+      .quote-text {
+        font-size: 1.125rem;
+        font-style: italic;
+        margin-bottom: 0.5rem;
+      }
+
+      .quote-author {
+        font-size: 0.875rem;
+      }
+
+    /* Curved Divider - Mobile (horizontal arc) */
+      .curved-divider-mobile {
+        display: block;
+        width: 100%;
+        height: 3rem;
+        margin-top: -1px;
+      }
+
+      .curved-divider-mobile svg {
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+
+      /* Curved Divider - Desktop */
+      .curved-divider {
+        display: none;
+      }
 
     /* Right Side - Beige with Content */
-    .right-side {
-      position: relative;
-      width: 100%;
-      background-color: #d5c9b6;
+      .right-side {
+        position: relative;
+        width: 100%;
+        background-color: #aea18a;
       display: flex;
       align-items: center;
       min-height: 60vh;
@@ -150,7 +180,11 @@
       }
 
       .logo {
-        max-width: 350px;
+        max-width: 500px;
+      }
+
+      .curved-divider-mobile {
+        display: none;
       }
 
       .curved-divider {
@@ -206,13 +240,26 @@
   <div class="container">
     <!-- Left Side - White with Logo -->
     <div class="left-side">
-      <img src="Logo_Melanie_Rome_4c_WEB_RGB.svg" alt="Melanie Romé Logo" class="logo">
+      <div>
+        <img src="Logo_Melanie_Rome_4c_WEB_RGB.svg" alt="Melanie Romé Logo" class="logo">
+        <div class="quote-section">
+          <p class="quote-text">Ich wage das große Abenteuer, ich selbst zu sein</p>
+          <p class="quote-author">Simone de Beauvoir</p>
+        </div>
+      </div>
     </div>
 
-    <!-- Curved Divider -->
+    <!-- Mobile Curved Divider -->
+    <div class="curved-divider-mobile">
+      <svg viewBox="0 0 100 100" preserveAspectRatio="none">
+        <path d="M0,0 L100,0 L100,100 Q50,20 0,100 Z" fill="#aea18a"/>
+      </svg>
+    </div>
+
+    <!-- Desktop Curved Divider -->
     <div class="curved-divider">
       <svg viewBox="0 0 100 100" preserveAspectRatio="none">
-        <path d="M0,0 Q80,50 0,100 L100,100 L100,0 Z" fill="#d5c9b6"/>
+        <path d="M0,0 Q80,50 0,100 L100,100 L100,0 Z" fill="#aea18a"/>
       </svg>
     </div>
 
