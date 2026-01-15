@@ -23,14 +23,11 @@
   overflow: hidden;
 }
 
-    .curved-divider-mobile {
-  position: absolute;
-  bottom: -1px;
-  left: 0;
+.curved-divider-mobile {
   width: 100%;
   height: 4rem;
+  position: relative;
   z-index: 5;
-  overflow: hidden;
 }
 
 .curved-divider-mobile svg {
@@ -310,12 +307,22 @@
 
 
 
-    <!-- Mobile Curved Divider -->
-    <div class="curved-divider-mobile">
-      <svg viewBox="0 0 100 100" preserveAspectRatio="none">
-      <path d="M0,0 H100 V70 Q50,100 0,70 Z" fill="#ffffff"/>
-      </svg>
-    </div>
+  <!-- Mobile Curved Divider -->
+<div class="curved-divider-mobile">
+  <svg viewBox="0 0 100 100" preserveAspectRatio="none">
+    <defs>
+      <mask id="curve-mask">
+        <!-- alles sichtbar -->
+        <rect width="100" height="100" fill="white"/>
+        <!-- weiße Ausstülpung nach unten -->
+        <path d="M0,0 H100 V60 Q50,100 0,60 Z" fill="black"/>
+      </mask>
+    </defs>
+
+    <!-- beige Fläche mit ausgeschnittener weißer Kurve -->
+    <rect width="100" height="100" fill="#aea18a" mask="url(#curve-mask)"/>
+  </svg>
+</div>
 
     <!-- Desktop Curved Divider -->
     <div class="curved-divider">
